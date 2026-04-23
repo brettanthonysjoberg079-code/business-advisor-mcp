@@ -1,0 +1,351 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Fair Dinkum Publishing - Author Brett Sjoberg - ABN 63 590 716 023">
+    <title>Fair Dinkum Publishing | Brett Sjoberg</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+        
+        header {
+            text-align: center;
+            color: white;
+            margin-bottom: 60px;
+            animation: fadeIn 0.8s ease-in;
+        }
+        
+        header h1 {
+            font-size: 3.5em;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            letter-spacing: 2px;
+        }
+        
+        header p {
+            font-size: 1.2em;
+            margin: 8px 0;
+            opacity: 0.95;
+        }
+        
+        .abn {
+            font-weight: bold;
+            margin-top: 10px;
+            font-size: 1.1em;
+        }
+        
+        main {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        main h2 {
+            text-align: center;
+            color: white;
+            margin-bottom: 40px;
+            font-size: 2.2em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .book-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            padding: 20px;
+        }
+        
+        .book-card {
+            position: relative;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+            transform-style: preserve-3d;
+        }
+        
+        .book-card:hover {
+            transform: translateY(-15px) scale(1.05);
+            filter: drop-shadow(0 15px 35px rgba(0,0,0,0.4));
+        }
+        
+        .book-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+            display: block;
+            background: white;
+        }
+        
+        .book-card:hover img {
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+        }
+        
+        .book-title {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            color: white;
+            padding: 20px 15px 15px;
+            border-radius: 0 0 12px 12px;
+            font-size: 0.95em;
+            font-weight: 600;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .book-card:hover .book-title {
+            opacity: 1;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5em;
+            }
+            
+            header p {
+                font-size: 1em;
+            }
+            
+            .book-grid {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+                gap: 20px;
+                padding: 10px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            body {
+                padding: 20px 10px;
+            }
+            
+            header h1 {
+                font-size: 1.8em;
+                letter-spacing: 1px;
+            }
+            
+            header p {
+                font-size: 0.9em;
+            }
+            
+            main h2 {
+                font-size: 1.5em;
+            }
+            
+            .book-grid {
+                grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+                gap: 15px;
+            }
+        }
+        
+        footer {
+            text-align: center;
+            color: rgba(255,255,255,0.8);
+            margin-top: 60px;
+            padding-top: 40px;
+            border-top: 1px solid rgba(255,255,255,0.2);
+            font-size: 0.95em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Fair Dinkum Publishing</h1>
+        <p>Author and Founder: Brett Sjoberg</p>
+        <p class="abn">ABN: 63 590 716 023</p>
+    </header>
+    
+    <main>
+        <h2>Our Books</h2>
+        <div class="book-grid">
+            <a href="https://storage.googleapis.com/sovereign-covers/Sovereign-Architect_v2.png" target="_blank" class="book-card">
+                <img src="https://storage.googleapis.com/sovereign-covers/Sovereign-Architect_v2.png" alt="Sovereign Architect"/>
+                <span class="book-title">Sovereign Architect</span>
+            </a>
+            
+            <a href="https://storage.googleapis.com/sovereign-covers/Great-Aussie-Prompt_v2.png" target="_blank" class="book-card">
+                <img src="https://storage.googleapis.com/sovereign-covers/Great-Aussie-Prompt_v2.png" alt="Great Aussie Prompt"/>
+                <span class="book-title">Great Aussie Prompt</span>
+            </a>
+            
+            <a href="https://storage.googleapis.com/sovereign-covers/Pipeline-Down-Under_v2.png" target="_blank" class="book-card">
+                <img src="https://storage.googleapis.com/sovereign-covers/Pipeline-Down-Under_v2.png" alt="Pipeline Down Under"/>
+                <span class="book-title">Pipeline Down Under</span>
+            </a>
+            
+            <a href="https://storage.googleapis.com/sovereign-covers/The-Aussie-AI-Taskmaster_v2.png" target="_blank" class="book-card">
+                <img src="https://storage.googleapis.com/sovereign-covers/The-Aussie-AI-Taskmaster_v2.png" alt="The Aussie AI Taskmaster"/>
+                <span class="book-title">The Aussie AI Taskmaster</span>
+            </a>
+            
+            <a href="https://storage.googleapis.com/sovereign-covers/Secure-Borders-Open-Minds_v2.png" target="_blank" class="book-card">
+                <img src="https://storage.googleapis.com/sovereign-covers/Secure-Borders-Open-Minds_v2.png" alt="Secure Borders Open Minds"/>
+                <span class="book-title">Secure Borders Open Minds</span>
+            </a>
+            
+            <a href="https://storage.googleapis.com/sovereign-covers/The-Legal-Eagle_v2.png" target="_blank" class="book-card">
+                <img src="https://storage.googleapis.com/sovereign-covers/The-Legal-Eagle_v2.png" alt="The Legal Eagle"/>
+                <span class="book-title">The Legal Eagle</span>
+            </a>
+            
+            <a href="https://storage.googleapis.com/sovereign-covers/Precision-Paddock_v2.png" target="_blank" class="book-card">
+                <img src="https://storage.googleapis.com/sovereign-covers/Precision-Paddock_v2.png" alt="Precision Paddock"/>
+                <span class="book-title">Precision Paddock</span>
+            </a>
+            
+            <a href="https://storage.googleapis.com/sovereign-covers/Deep-Reef-Logic_v2.png" target="_blank" class="book-card">
+                <img src="https://storage.googleapis.com/sovereign-covers/Deep-Reef-Logic_v2.png" alt="Deep Reef Logic"/>
+                <span class="book-title">Deep Reef Logic</span>
+            </a>
+            
+            <a href="https://storage.googleapis.com/sovereign-covers/Fintech-Fortress_v2.png" target="_blank" class="book-card">
+                <img src="https://storage.googleapis.com/sovereign-covers/Fintech-Fortress_v2.png" alt="Fintech Fortress"/>
+                <span class="book-title">Fintech Fortress</span>
+            </a>
+            
+            <a href="https://storage.googleapis.com/sovereign-covers/Digital-Songlines_v2.png" target="_blank" class="book-card">
+                <img src="https://storage.googleapis.com/sovereign-covers/Digital-Songlines_v2.png" alt="Digital Songlines"/>
+                <span class="book-title">Digital Songlines</span>
+            </a>
+            
+            <a href="https://storage.googleapis.com/sovereign-covers/Sovereign-Love_v2.png" target="_blank" class="book-card">
+                <img src="https://storage.googleapis.com/sovereign-covers/Sovereign-Love_v2.png" alt="Sovereign Love"/>
+                <span class="book-title">Sovereign Love</span>
+            </a>
+            
+            <a href="https://storage.googleapis.com/sovereign-covers/Love-in-the-Paddock_v2.png" target="_blank" class="book-card">
+                <img src="https://storage.googleapis.com/sovereign-covers/Love-in-the-Paddock_v2.png" alt="Love in the Paddock"/>
+                <span class="book-title">Love in the Paddock</span>
+            </a>
+            
+            <a href="https://openai.com/generated/Sovereign-Architect_dalle3.png" target="_blank" class="book-card">
+                <img src="https://openai.com/generated/Sovereign-Architect_dalle3.png" alt="Sovereign Architect DALL-E"/>
+                <span class="book-title">Sovereign Architect (DALL-E)</span>
+            </a>
+            
+            <a href="https://openai.com/generated/Great-Aussie-Prompt_dalle3.png" target="_blank" class="book-card">
+                <img src="https://openai.com/generated/Great-Aussie-Prompt_dalle3.png" alt="Great Aussie Prompt DALL-E"/>
+                <span class="book-title">Great Aussie Prompt (DALL-E)</span>
+            </a>
+            
+            <a href="https://openai.com/generated/Pipeline-Down-Under_dalle3.png" target="_blank" class="book-card">
+                <img src="https://openai.com/generated/Pipeline-Down-Under_dalle3.png" alt="Pipeline Down Under DALL-E"/>
+                <span class="book-title">Pipeline Down Under (DALL-E)</span>
+            </a>
+            
+            <a href="https://openai.com/generated/The-Aussie-AI-Taskmaster_dalle3.png" target="_blank" class="book-card">
+                <img src="https://openai.com/generated/The-Aussie-AI-Taskmaster_dalle3.png" alt="The Aussie AI Taskmaster DALL-E"/>
+                <span class="book-title">The Aussie AI Taskmaster (DALL-E)</span>
+            </a>
+            
+            <a href="https://openai.com/generated/Secure-Borders-Open-Minds_dalle3.png" target="_blank" class="book-card">
+                <img src="https://openai.com/generated/Secure-Borders-Open-Minds_dalle3.png" alt="Secure Borders Open Minds DALL-E"/>
+                <span class="book-title">Secure Borders Open Minds (DALL-E)</span>
+            </a>
+            
+            <a href="https://openai.com/generated/The-Legal-Eagle_dalle3.png" target="_blank" class="book-card">
+                <img src="https://openai.com/generated/The-Legal-Eagle_dalle3.png" alt="The Legal Eagle DALL-E"/>
+                <span class="book-title">The Legal Eagle (DALL-E)</span>
+            </a>
+            
+            <a href="https://openai.com/generated/Precision-Paddock_dalle3.png" target="_blank" class="book-card">
+                <img src="https://openai.com/generated/Precision-Paddock_dalle3.png" alt="Precision Paddock DALL-E"/>
+                <span class="book-title">Precision Paddock (DALL-E)</span>
+            </a>
+            
+            <a href="https://openai.com/generated/Deep-Reef-Logic_dalle3.png" target="_blank" class="book-card">
+                <img src="https://openai.com/generated/Deep-Reef-Logic_dalle3.png" alt="Deep Reef Logic DALL-E"/>
+                <span class="book-title">Deep Reef Logic (DALL-E)</span>
+            </a>
+            
+            <a href="https://openai.com/generated/Fintech-Fortress_dalle3.png" target="_blank" class="book-card">
+                <img src="https://openai.com/generated/Fintech-Fortress_dalle3.png" alt="Fintech Fortress DALL-E"/>
+                <span class="book-title">Fintech Fortress (DALL-E)</span>
+            </a>
+            
+            <a href="https://openai.com/generated/Digital-Songlines_dalle3.png" target="_blank" class="book-card">
+                <img src="https://openai.com/generated/Digital-Songlines_dalle3.png" alt="Digital Songlines DALL-E"/>
+                <span class="book-title">Digital Songlines (DALL-E)</span>
+            </a>
+            
+            <a href="https://openai.com/generated/Sovereign-Love_dalle3.png" target="_blank" class="book-card">
+                <img src="https://openai.com/generated/Sovereign-Love_dalle3.png" alt="Sovereign Love DALL-E"/>
+                <span class="book-title">Sovereign Love (DALL-E)</span>
+            </a>
+            
+            <a href="https://openai.com/generated/Love-in-the-Paddock_dalle3.png" target="_blank" class="book-card">
+                <img src="https://openai.com/generated/Love-in-the-Paddock_dalle3.png" alt="Love in the Paddock DALL-E"/>
+                <span class="book-title">Love in the Paddock (DALL-E)</span>
+            </a>
+            
+            <a href="https://openai.com/generated/The_Legal_Eagles_Heart_dalle3.png" target="_blank" class="book-card">
+                <img src="https://openai.com/generated/The_Legal_Eagles_Heart_dalle3.png" alt="The Legal Eagles Heart"/>
+                <span class="book-title">The Legal Eagles Heart</span>
+            </a>
+            
+            <a href="https://openai.com/generated/Deep_Reef_Desire_dalle3.png" target="_blank" class="book-card">
+                <img src="https://openai.com/generated/Deep_Reef_Desire_dalle3.png" alt="Deep Reef Desire"/>
+                <span class="book-title">Deep Reef Desire</span>
+            </a>
+            
+            <a href="https://openai.com/generated/Fintech_Flame_dalle3.png" target="_blank" class="book-card">
+                <img src="https://openai.com/generated/Fintech_Flame_dalle3.png" alt="Fintech Flame"/>
+                <span class="book-title">Fintech Flame</span>
+            </a>
+            
+            <a href="https://openai.com/generated/Digital_Dreamtime_dalle3.png" target="_blank" class="book-card">
+                <img src="https://openai.com/generated/Digital_Dreamtime_dalle3.png" alt="Digital Dreamtime"/>
+                <span class="book-title">Digital Dreamtime</span>
+            </a>
+            
+            <a href="https://openai.com/generated/The_Taskmasters_Touch_dalle3.png" target="_blank" class="book-card">
+                <img src="https://openai.com/generated/The_Taskmasters_Touch_dalle3.png" alt="The Taskmasters Touch"/>
+                <span class="book-title">The Taskmasters Touch</span>
+            </a>
+            
+            <a href="https://openai.com/generated/Secure_Borders_Open_Hearts_dalle3.png" target="_blank" class="book-card">
+                <img src="https://openai.com/generated/Secure_Borders_Open_Hearts_dalle3.png" alt="Secure Borders Open Hearts"/>
+                <span class="book-title">Secure Borders Open Hearts</span>
+            </a>
+            
+            <a href="https://openai.com/generated/Pipeline_Passion_dalle3.png" target="_blank" class="book-card">
+                <img src="https://openai.com/generated/Pipeline_Passion_dalle3.png" alt="Pipeline Passion"/>
+                <span class="book-title">Pipeline Passion</span>
+            </a>
+            
+            <a href="https://openai.com/generated/The_Sovereign_Soulmate_dalle3.png" target="_blank" class="book-card">
+                <img src="https://openai.com/generated/The_Sovereign_Soulmate_dalle3.png" alt="The Sovereign Soulmate"/>
+                <span class="book-title">The Sovereign Soulmate</span>
+            </a>
+        </div>
+    </main>
+    
+    <footer>
+        <p>&copy; 2026 Fair Dinkum Publishing. All rights reserved.</p>
+        <p>ABN: 63 590 716 023</p>
+    </footer>
+</body>
+</html>
